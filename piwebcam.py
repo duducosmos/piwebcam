@@ -29,8 +29,8 @@ import cv2
 from threading import Thread 
 
 class PiWebcam(Thread):
-	def __init__(self):
-		Thread.__init__(self, facemodel="haarcascade_frontalface_default.xml")
+	def __init__(self, facemodel="haarcascade_frontalface_default.xml"):
+		Thread.__init__(self)
 		self._cam = cv2.VideoCapture(0)
 		self._cam.set(3,100)
 		self._cam.set(4,100)
