@@ -97,10 +97,8 @@ if __name__ == "__main__":
 
 	while True:
 		img = mycam.get_image()
-		if img is not None:	
+		if img is not None:
+			mycam.face_detection()
 
-			mycam.face_detection()			
-
-					
 		if mycam.is_running() is False:
 			break
